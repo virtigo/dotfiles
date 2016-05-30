@@ -19,7 +19,10 @@ set $mod Mod4
 
 	# Set the wallpaper
 	exec --no-startup-id feh --bg-fill /home/slensky/Pictures/wallpaper_current.jpg
-	
+        
+        # Load .Xresources file
+        exec --no-startup-id xrdb -load /home/slensky/.Xresources
+
 	# Start compton for rofi transparency
 	exec --no-startup-id compton --vsync opengl
 	
@@ -53,15 +56,15 @@ set $mod Mod4
 	
 	# open an explorer window
 	bindsym $mod+e exec --no-startup-id nautilus
-	
-	# open a root explorer window
 	bindsym $mod+Shift+e exec --no-startup-id gksudo nautilus
 	
 	# open gedit
 	bindsym $mod+g exec --no-startup-id gedit
-	
-	# open root gedit
 	bindsym $mod+Shift+g exec --no-startup-id gksudo gedit
+	
+	# open vim in xterm
+	bindsym $mod+v exec --no-startup-id xvim
+	bindsym $mod+Shift+v exec --no-startup-id gksudo xvim
 	
 	# open chrome
 	bindsym $mod+Shift+Return exec --no-startup-id google-chrome
@@ -160,9 +163,6 @@ bindsym $mod+Shift+Right move right
 # split in horizontal orientation
 bindsym $mod+h split h
 
-# split in vertical orientation
-bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
@@ -235,11 +235,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $bg-color 	         #0f0f0f
+set $inactive-bg-color   #0f0f0f
+set $text-color          #e0e0e0
+set $inactive-text-color #686868
+set $urgent-bg-color     #ff4450
 
 # window colors
 #                       border              background         text                 indicator
@@ -253,7 +253,7 @@ bar {
   	status_command i3blocks -c /home/slensky/.i3/i3blocks.conf
 	colors {
 		background $bg-color
-	    	separator #757575
+	    	separator $inactive-text-color
 		#                  border             background         text
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color

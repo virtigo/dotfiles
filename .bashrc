@@ -118,8 +118,10 @@ export LD_LIBRARY_PATH
 
 
 # Include cuda in the PATH
-PATH="$PATH:/usr/local/cuda-7.5/bin"
+PATH="$PATH:/usr/local/cuda-7.5/bin:$HOME/bin/path"
 export PATH
 
+export GOPATH=$HOME/Code/go
+
 # Set the color scheme
-~/.shell-colors/base16-twilight.dark.sh
+# ~/.shell-colors/base16-colors.dark.sh
