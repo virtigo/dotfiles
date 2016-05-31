@@ -22,3 +22,12 @@ xterm*scaleHeight: 1.04
 *color14: #71ddff
 *color7: #e0e0e0
 *color15: #e0e0e0
+
++! ------------------------------------------------------------------------------
++! ROFI Color theme
++! ------------------------------------------------------------------------------
++rofi.color-enabled: true
++rofi.color-window: #2f343f, #002b36, #2f343f
++rofi.color-normal: #2f343f, #f3f4f5, argb:0000000, #2f343f, #71ddff
++rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
++rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
