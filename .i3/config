@@ -63,8 +63,8 @@ set $mod Mod4
 	bindsym $mod+Shift+g exec --no-startup-id gksudo gedit
 	
 	# open vim in xterm
-	bindsym $mod+v exec --no-startup-id xvim
-	bindsym $mod+Shift+v exec --no-startup-id gksudo xvim
+	bindsym $mod+x exec --no-startup-id xvim
+	bindsym $mod+Shift+x exec --no-startup-id gksudo xvim
 	
 	# open chrome
 	bindsym $mod+Shift+Return exec --no-startup-id google-chrome
@@ -162,6 +162,9 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
